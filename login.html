@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
+        <link rel="stylesheet" href="./css/style.css">
+</head>
+<body style="font-family: monospace; font-size: 18px;">
+   <!-- login -->
+
+   <div class="al" >
+    <div class="box">
+    <div class="lef">
+    <img class="img" src="./images/signin-image.jpg" alt="">
+    <a href="index.html" style="color: rgb(111, 129, 211); text-decoration: underline;">create an account</a>
+    </div>
+    <div class="her">
+        <h1>LOGIN</h1>
+        <!-- <form id="loginform" onsubmit="login(event)"> -->
+          <div id="login-instructions" class="hidden">
+            <p>Password must contain at least 8 characters consisting of lower and upper case letters, numbers, and symbols.</h4>
+          </div>
+          <form id="loginForm">
+                <label for="email">Username:</label>
+                <input class="pot" style="background-color: rgb(247, 184, 147);" type="email" name="email" id="ema" placeholder="Enter your username.." required>
+               
+                <label for="password">Password:</label>
+                <input  class="pot" style="background-color: rgb(247, 184, 147);" type="password" name="password" id="pass" placeholder="Enter your password.." required>
+        <p><input type="checkbox" name="" id="">Remember me</p>
+        <p>
+        <button class="subt" type="submit" required>Login Now</button>
+        <button type="submit" id="tn"><a href="index.html">Go Back</a></button>
+      </p>
+        <div id='result' class="hidden"></div>
+          </form>
+    </div>
+    </div>
+  </div>
+   <script src="./js/main.js"></script>
+</body>
+</html>

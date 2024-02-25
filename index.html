@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PropClicks</title>
+        <!-- Google Font -->
+        <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+        rel="stylesheet">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+      <!-- Stylesheet -->
+      <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="head">
+        <div class="logo">
+            <p style="font-style: italic; font-size: 22px; font-weight: bold; color: rgb(250, 75, 11);">propClicks</p>
+        </div>
+        <div class="menu-bar">
+        <i class="bx bx-menu-alt-right" id="menu"></i>
+        <div class="left">
+            <li><a href="#buttons">Property Listings</a></li>
+            <li><a href="login.html">Buy</a></li>
+            <li><a href="login.html">Sell</a></li>
+            <li><a href="login.html">Find Agents</a></li>
+            <!-- buttons -->
+            <div class="dropdown">
+              <button class="dropdown-toggle" id="reg1" onclick="toggleDropdown()">SignUp</button>
+              <ul class="dropdown-menu" id="dropdown-menu">
+                <li><a href="#" onclick="showSignupForm('landlord')">SignUp As a Landlord</a></li>
+                <li><a href="#" onclick="showSignupForm('tenant')">SignUp As a Tenant</a></li>
+              </ul>
+            </div>
+            <button id="reg2"><a href="log.html">Login</a></button>
+            <div class="circled-container">
+                <img src="./images/testimonial-1.jpg" alt="profile pic" id="profile-pic" onclick="toggleFeatures()" >
+                <div id="features">
+                    <ul>
+                    <li>See Property Listings</li>
+                    <li>Subscribe</li>
+                    <li>settings</li>
+                    <li>Sign out</li>
+                    </ul>
+                </div>
+             </div>
+      </div>
+        </div>
+    </header>
+
+     <!-- landlord signup form -->
+     <div id="landlord-signup-form" class="signup-form">
+      <h2>Landlord SignUp</h2>
+      <form>
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="emaill" placeholder="Enter your email.." required>
+       
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" placeholder="Enter your password.." required>
+        
+        <label for="retype-password">Retype-Password:</label>
+        <input type="password" name="password" id="password" placeholder="Enter your password.." required>
+        
+        <label for="location">Preferred Location:</label>
+        <input type="text" name="location" id="location" placeholder="Enter preferred location.."required>
+        
+        <label for="building">Type of Building:</label>
+        <select name="building" id="building">
+          <option value="">Residential</option>
+          <option value="">Industrial</option>
+          <option value="">Commercial</option>
+        </select>
+
+        <label for="bedrooms">Number of rooms:</label>
+        <select name="bedrooms" id="bedrooms">
+          <option value="">2</option>
+          <option value="">4</option>
+          <option value="">7</option>
+          <option value="">10</option>
+          <option value="">18</option>
+        </select>
+
+        <label for="budget">Price Range:</label>
+        <select name="budget" id="budget">
+          <option value="500,000">Up to #500,000.00</option>
+          <option value="1,000.000">Up to #1,000,000.00</option>
+          <option value="2,000,000">Up to #2,000,000.00</option>
+          <option value="4,000,000">More than #4,000,000.00</option>
+        </select>
+
+        <label for="registration">Registration Number:</label>
+        <input type="hidden" name="registration" placeholder="Enter your building registration number.."required>
+        
+        <label for="validation">Year validated</label>
+        <input type="date" name="datetime" id="" placeholder="Enter date..">
+        <p class="ere"><input type="checkbox" name="checkbox" id="">I am a landlord or certified agent</p>
+        <button type="submit" id="reg1">SignUp</button>
+      </form>
+    </div>
+
+    <!-- tenant signup form -->
+    <div id="tenant-signup-form" class="signup-form">
+      <h2>Tenant SignUp</h2>
+      <form>
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="emaill" placeholder="Enter your email.." required>
+       
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" placeholder="Enter your password.." required>
+        
+        <label for="retype-password">Retype-Password:</label>
+        <input type="password" name="password" id="password" placeholder="Enter your password.." required>
+        
+        <label for="location">Preferred Location:</label>
+        <input type="text" name="location" id="location" placeholder="Enter preferred location.."required>
+        
+        <label for="building">Type of Building:</label>
+        <select name="building" id="building">
+          <option value="">Residential</option>
+          <option value="">Industrial</option>
+          <option value="">Commercial</option>
+        </select>
+
+        <label for="bedrooms">Number of  bedrooms:</label>
+        <select name="bedrooms" id="bedrooms">
+          <option value="">2</option>
+          <option value="">4</option>
+          <option value="">7</option>
+          <option value="">10</option>
+          <option value="">18</option>
+          <option value="">Other</option>
+        </select>
+
+        <label for="budget">Budget Range:</label>
+        <select name="budget" id="budget">
+          <option value="500,000">Up to #500,000.00</option>
+          <option value="1,000.000">Up to #1,000,000.00</option>
+          <option value="2,000,000">Up to #2,000,000.00</option>
+          <option value="4,000,000">More than #4,000,000.00</option>
+        </select>
+
+        <button type="submit" id="reg1">SignUp</button>
+      </form>
+    </div>
+    <!--
+      <div class="x">
+      <a href="tel:+234334543833"><i id="call" style="font-size: 26px;" class="bx bxs-phone-call"></i></a>
+      <a href=""><img class="twitter" src="./images/twitter.png" alt=""></a>
+      <a href="#"><img class="exe" src="./images/linkedin.png" alt=""></a>
+      <a href=""><img class="exe" src="./images/face.png" alt=""></a>
+    </div>  
+    
+        <i class="bx bxs-map"></i>
+         <i id="ed" class="bx bxs-bed"></i>
+      <i class="bx bxs-camera-home"></i>
+      <i class="bx bxs-like"></i>
+    
+       -->
+
+ <div class="homepg"> 
+  <div class="overlay" data-overlay=""></div>
+      
+  <!--
+    - MODAL
+  -->
+
+  <div class="modal" data-modal="">
+
+    <div class="modal-close-overlay" data-modal-overlay=""></div>
+
+    <div class="modal-content">
+
+      <button class="modal-close-btn" data-modal-close="">
+        <ion-icon name="close-outline" role="img" class="md hydrated" aria-label="close outline"></ion-icon>
+      </button>
+
+      <div class="newsletter-img">
+        <img src="./images/dup.jpeg" alt="subscribe newsletter" width="400" height="400">
+      </div>
+
+      <div class="newsletter">
+
+        <form action="#">
+
+          <div class="newsletter-header">
+
+            <h3 class="newsletter-title">Subscribe Newsletter.</h3>
+
+            <p class="newsletter-desc">
+              Subscribe to be the first to know about PropClick's new properties and opportunities
+            </p>
+
+          </div>
+
+          <input type="email" name="email" class="email-field" placeholder="Email Address" required="">
+
+          <button type="submit" class="btn-newsletter">Subscribe</button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!--
+    - NOTIFICATION TOAST
+  -->
+
+  <div class="notification-toast" data-toast="">
+
+    <button class="toast-close-btn" data-toast-close="">
+      <ion-icon name="close-outline" role="img" class="md hydrated" aria-label="close outline"></ion-icon>
+    </button>
+
+    <div class="toast-banner">
+      <img src="./images/duplex.jpeg" alt="Duplex" width="80" height="68">
+    </div>
+
+    <div class="toast-detail">
+
+      <p class="toast-message">
+        Someone in new, just bought
+      </p>
+
+      <p class="toast-title">
+       an exquisite mansion
+      </p>
+
+      <p class="toast-meta">
+        <time datetime="PT2M">2 Minutes</time>ago
+      </p>
+
+    </div>
+  </div>
+  </div>
+
+
+  <div class="overlay2"></div>
+      <section class="s">
+        <p class="sp">Make your dream a reality</p>
+        <p class="style">Browse, Explore and find your Perfect Home</p>
+        <div id="search" class="search-con">
+          <input type="text" name="" id="searchOutput" placeholder="search based on location, price, rooms...">
+          <button id="searchButton"><i class="bx bx-search"></i></button>
+        </div>
+        <br>
+        <div class="mn">
+        Why we are your best choice: 
+        <br>
+        <p class="er"><img src=".\images\checked-icon.png" alt="icon" style="width: 20px; height: 15px;">100,000 satisfied clients</p>
+        <p class="er"><img src=".\images\checked-icon.png" alt="icon" style="width: 20px; height: 15px;">300k+ classy Buildings</p>
+        <p class="er"><img src=".\images\checked-icon.png" alt="icon" style="width: 20px; height: 15px;">76,540+ world class employees</p>
+        </div>
+    </section>
+    <i class='bx bxs-up-arrow-circle' id="scrollToTop" style="font-size:42px; cursor: pointer; color:rgb(230, 107, 62); "><a href="#profile"></a></i>
+
+    <section class="services">
+    <h3 style="text-align: center; font-size: 27px; margin-top: 32px; margin-bottom: 32px; font-weight: 1400px; text-shadow: 1px 2px 2px salmon;">Our Services</h3>
+        <div class="d">
+          <div class="cardd"> 
+                <p style="font-size: 23px; font-weight: bold;margin-bottom: 22px;">Buy,Sell and Rent a Home</p>
+            <div class="contain">
+                <h4>We will work with you to understand your needs and budget in helping you find your perfect home.</h4>
+                <button id="tnn">Learn More</button>
+            </div>
+        </div>
+        <div class="cardd"> 
+              <p style="font-size: 23px; font-weight: bold;margin-bottom: 22px;">Real Estate Consulting</p>
+              <div class="contain">
+              <h4>We provide you with expert advice and variety of options on all aspects of real estates.</h4>
+              <button id="tnn">Learn More</button>
+          </div>
+      </div>
+            <div class="cardd"> 
+                  <p style="font-size: 23px; font-weight: bold;margin-bottom: 22px;">Relocation Assistance</p>
+                  <div class="contain">
+                  <h4>We can help you find a new home that meets your criteria if you are relocating to a new evnironment.</h4>
+                  <button id="tnn">Learn More</button>
+              </div>
+          </div>
+        </div>
+      </section>
+
+      <h3 style="text-align: center; font-size: 27px; margin-top: 32px; margin-bottom: 32px; font-weight: 1400; text-shadow: 1px 2px 2px salmon;">Popular Properties</h3>
+                Filter Options:
+      <div id="buttons">
+        <button class="button-value" onclick="filterProduct('all')">All</button>
+        <button class="button-value" onclick="filterProduct('flats')">
+          Flats
+        </button>
+        <button class="button-value" onclick="filterProduct('duplex')">
+          Duplex
+        </button>
+        <button class="button-value" onclick="filterProduct('mansion')">
+          Exquisive Mansion
+        </button>
+        <button class="button-value" onclick="filterProduct('industrial')">
+          Vacant Houses
+        </button>
+        <button class="button-value" onclick="filterProduct('commercial')">
+          Commercial Building
+        </button>
+      </div>
+      <div id="products"></div>
+      <button class="button-val" onclick="filterProduct('')">Load  More</button>
+    
+    <h3 style="text-align: center; font-size: 27px; margin-top: 47px; text-shadow: 1px 2px 2px salmon; font-weight: 1100px; ">Words from satisfied customers</h3>
+    <section id="moveText">
+    <div class="test">
+<div class="testimonials">
+    <div class="dear">
+      <img class="testimg" src="./images/titi.jpg" alt="">
+    <div class="starp">
+      <p class="star">
+        <img src=".\images\star-icon.png" alt="star">
+        <img src=".\images\star-icon.png" alt="star">
+        <img src=".\images\star-icon.png" alt="star">
+        <img src=".\images\star-icon.png" alt="star">
+        <img src=".\images\star-icon.png" alt="star">
+      </p>
+    </div>
+    <p>"Propclicks is Nigeria's number 1 to go house search."</p>
+    <h4 style="margin: 5px;">Grey</h4>
+    </div>
+    </div>
+
+<div class="testimonials">
+    <div class="dear">
+      <img class="testimg" src="./images/ola.jpg" alt="">
+    <div class="starp">
+      <p class="star">
+        <img src=".\images\star-icon.png" alt="star">
+        <img src=".\images\star-icon.png" alt="star">
+        <img src=".\images\star-icon.png" alt="star">
+        <img src=".\images\star-icon.png" alt="star">
+        <img src=".\images\star-icon.png" alt="star">
+      </p>
+    </div>
+    <p>"Propclicks is tested and trusted..."</p>
+    <h4 style="margin: 5px;">Ella</h4>
+</div>
+
+</div>
+<div class="testimonials">
+    <div class="dear">
+      <img class="testig" src="./images/ch.jpg" alt="">
+<div class="starpg">
+  <p class="star">
+    <img src=".\images\star-icon.png" alt="star">
+    <img src=".\images\star-icon.png" alt="star">
+    <img src=".\images\star-icon.png" alt="star">
+    <img src=".\images\star-icon.png" alt="star">
+    <img src=".\images\star-icon.png" alt="star">
+  </p>
+</div>
+<p>"Propclicks is Reliable and Efficient."</p>
+<h4 style="margin: 5px;">Derick</h4>
+</div>
+</div>
+<div class="testimonials">
+    <div class="dear">
+        <img class="testimg" src="./images/testimonial-1.jpg" alt="">
+<div class="starp">
+  <p class="star">
+    <img src=".\images\star-icon.png" alt="star">
+    <img src=".\images\star-icon.png" alt="star">
+    <img src=".\images\star-icon.png" alt="star">
+    <img src=".\images\star-icon.png" alt="star">
+    <img src=".\images\star-icon.png" alt="star">
+  </p>
+</div>
+<p>"Propclicks have a large range of options to choose from"</p>
+<h4 style="margin: 5px;">Tella</h4>
+</div>
+</div>
+</div>
+    </section>
+    <section class="den">
+    <div class="yes">
+      <img src="./images/co.jpeg" alt="">
+    </div>
+    <div class="newsletter">
+
+        <form action="#">
+
+          <div class="newsletter-header">
+
+            <h3 class="newsletter-title">Subscribe Newsletter.</h3>
+
+            <p class="newsletter-desc">
+              Subscribe to be the first to know about PropClick's new properties and opportunities
+            </p>
+
+          </div>
+
+          <input type="email" name="email" class="email-field" placeholder="Email Address" required="">
+
+          <button type="submit" class="btn-newsletter">Subscribe</button>
+
+        </form>
+
+      </div>
+  </section>
+<footer class="foot"> 
+  <div class="fot">  
+  <div class="ftt">
+  <li><a href="">Home</a></li>
+  <li><a href="">About Us</a></li>
+  <li><a href="">Services</a></li>
+  <li><a href="">Property Listings</a></li>
+  <li><a href="">Contact</a></li>
+  </div>
+  <div class="resource">
+  <li><a href="">Blog</a></li>
+  <li><a href="">Buyer's Resources</a></li>
+  <li><a href="">Seller's Resources</a></li>
+  <li><a href="">Testimonials</a></li>
+  <li><a href="">FAQ</a></li>
+  </div>
+  <div class="acc">
+    <li><a href="">My Account</a></li>
+    <li><a href="">Wish List</a></li>
+    <li><a href="">Newsletter</a></li>
+    <li><a href="">Privacy policy</a></li>
+  <li><a href="">Terms of Service</a></li>
+  </div>
+  </div>
+  
+<div class="ax">
+  <p style="text-align: center;">follow us:</p>
+    <a href=""><img class="twitter" src="./images/twitter.png" alt=""></a>
+    <a href="https://www.linkedin.com/in/oluwaropo-titilope"><img class="exe" src="./images/linkedin.png" alt=""></a>
+    <a href=""><img class="exe" src="./images/face.png" alt=""></a>
+</div>
+    <p class="pp"> &copy; 2023 propclicks. All right reserved</p>                                                                                                     
+</footer>
+    <!-- Script -->
+    <script src="js/main.js"></script>
+</body>
+</html>

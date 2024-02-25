@@ -1,0 +1,171 @@
+*{
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#tn{
+    color: white;
+    background-color: rgb(230, 107, 62);
+  }
+  #tn:hover{
+    color: rgb(230, 107, 62);
+    background-color: white;
+    transition: ease-out 0.3ms;
+    border: 2px solid rgb(230, 107, 62);
+  }
+.subt{
+    color: rgb(230, 107, 62);
+    font-size: 20px;
+    justify-content: center;
+    width: 130px;
+    transition: ease-out 0.3ms;
+    border: 2px solid rgb(230, 107, 62);
+    height: 36px;
+    cursor: pointer;
+    border-radius: 8px;
+    text-align: center;
+   background-color: white;
+  }
+  #tn a{
+    color: white;
+  }
+  #tn a:hover{
+    color: rgb(230, 107, 62);
+  }
+  #tn{
+    font-size: 20px;
+    justify-content: center;
+    width: 130px;
+    height: 36px;
+    cursor: pointer;
+    border-radius: 8px;
+    text-align: center;
+    margin-left: 5px;
+  }
+  .subt:hover{
+    background-color: rgb(230, 107, 62);
+    color: rgb(255, 255, 255);
+  }
+.imgl img{
+    display: flex;
+    width: 230px;
+    height: 300px;
+    padding-top: 8px;
+    margin-top: 50px;
+    margin-right: 10px;
+    margin-left: 15px;
+}
+.image-container{
+    display: flex;
+    background-color: #fff;
+    width: 690px;
+    height: 510px;
+    margin-bottom: 20px;
+    margin: 50px 320px;
+    box-sizing: border-box;
+    border-radius: 16px;
+    box-sizing: 9;
+}
+
+.stn{
+    background-color: blueviolet;
+    background-position: center;
+    height: 100vh;
+    padding-top: 25px;
+    background-size: cover;
+}
+.button1{
+    color: white;
+    background-color: ash;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border: none;
+    padding: 10px 32px;
+    display: flex;
+    font-size: 13px;
+    width: 270px;
+    height: 40px;
+    margin: 15px 1px;
+    border-radius: 20px;
+    border-color: #c4abab;
+}
+.button a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 300;
+}
+.log{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 55px;
+    margin-left: 100px;
+    padding-top: 18px;
+}
+.email{
+    width: 15px;
+}
+.password{
+    width: 15px; 
+}
+.log button{
+    color: black;
+}
+.log p{
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    font-size: 23px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+.log h5{
+    margin: 15px 1px;
+}
+.h5{
+    text-decoration: underline;
+    color: rgb(230, 107, 62);
+}
+@media (max-width:700px) {
+   
+.imgl img{
+   /* width: 130px;
+    height: 160px;
+    padding-top: 3px;
+    margin-top: 10px;
+    margin-right: 4px;
+    margin-left: 4px;*/
+    display: none;
+}
+.image-container{
+    width: 300px;
+    height: 440px;
+    margin-bottom: 10px;
+    margin: 20px 10px;
+    box-sizing: border-box;
+    border-radius: 12px;
+    box-sizing: 6;
+} 
+.log{
+    margin-top: 40px;
+    margin-left: 20px;
+    padding-top: 14px;
+}
+.button1{
+    padding: 10px 30px;
+    font-size: 14px;
+    width: 250px;
+    height: 36px;
+    margin: 17px 1px;
+    border-radius: 20px;
+}
+.button{
+    padding: 10px 30px;
+    font-size: 14px;
+    font-weight: lighter;
+    width: 250px;
+    margin: 15px 1px;
+    text-decoration: none;
+    border-radius: 20px;
+}
+}

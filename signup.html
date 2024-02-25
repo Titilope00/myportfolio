@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+     <!-- landlord signup form -->
+     <div id="landlord-signup-form" class="signup-form">
+        <h2>Landlord SignUp</h2>
+        <form>
+          <label for="email">Email:</label>
+          <input type="email" name="email" id="emaill" placeholder="Enter your email.." required>
+         
+          <label for="password">Password:</label>
+          <input type="password" name="password" id="password" placeholder="Enter your password.." required>
+          
+          <label for="retype-password">Retype-Password:</label>
+          <input type="password" name="password" id="password" placeholder="Enter your password.." required>
+          
+          <label for="location">Preferred Location:</label>
+          <input type="text" name="location" id="location" placeholder="Enter preferred location.."required>
+          
+          <label for="building">Type of Building:</label>
+          <select name="building" id="building">
+            <option value="">Residential</option>
+            <option value="">Industrial</option>
+            <option value="">Commercial</option>
+          </select>
+
+          <label for="bedrooms">Number of rooms:</label>
+          <select name="bedrooms" id="bedrooms">
+            <option value="">2</option>
+            <option value="">4</option>
+            <option value="">7</option>
+            <option value="">10</option>
+            <option value="">18</option>
+          </select>
+
+          <label for="budget">Price Range:</label>
+          <select name="budget" id="budget">
+            <option value="500,000">Up to #500,000.00</option>
+            <option value="1,000.000">Up to #1,000,000.00</option>
+            <option value="2,000,000">Up to #2,000,000.00</option>
+            <option value="4,000,000">More than #4,000,000.00</option>
+          </select>
+
+          <label for="registration">Registration Number:</label>
+          <input type="hidden" name="registration" placeholder="Enter your building registration number.."required>
+          
+          <label for="validation">Year validated</label>
+          <input type="date" name="datetime" id="" placeholder="Enter date..">
+          <p class="ere"><input type="checkbox" name="checkbox" id="">I am a landlord or certified agent</p>
+          <button type="submit" id="reg1">SignUp</button>
+        </form>
+      </div>
+
+      <!-- tenant signup form -->
+      <div id="tenant-signup-form" class="signup-form">
+        <h2>Tenant SignUp</h2>
+        <form>
+          <label for="email">Email:</label>
+          <input type="email" name="email" id="emaill" placeholder="Enter your email.." required>
+         
+          <label for="password">Password:</label>
+          <input type="password" name="password" id="password" placeholder="Enter your password.." required>
+          
+          <label for="retype-password">Retype-Password:</label>
+          <input type="password" name="password" id="password" placeholder="Enter your password.." required>
+          
+          <label for="location">Preferred Location:</label>
+          <input type="text" name="location" id="location" placeholder="Enter preferred location.."required>
+          
+          <label for="building">Type of Building:</label>
+          <select name="building" id="building">
+            <option value="">Residential</option>
+            <option value="">Industrial</option>
+            <option value="">Commercial</option>
+          </select>
+
+          <label for="bedrooms">Number of  bedrooms:</label>
+          <select name="bedrooms" id="bedrooms">
+            <option value="">2</option>
+            <option value="">4</option>
+            <option value="">7</option>
+            <option value="">10</option>
+            <option value="">18</option>
+            <option value="">Other</option>
+          </select>
+
+          <label for="budget">Budget Range:</label>
+          <select name="budget" id="budget">
+            <option value="500,000">Up to #500,000.00</option>
+            <option value="1,000.000">Up to #1,000,000.00</option>
+            <option value="2,000,000">Up to #2,000,000.00</option>
+            <option value="4,000,000">More than #4,000,000.00</option>
+          </select>
+
+          <button type="submit" id="reg1">SignUp</button>
+        </form>
+      </div>
+
+      <!-- Script -->
+    <script src="./js/main.js"></script>
+</body>
+</html>
